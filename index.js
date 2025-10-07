@@ -10,7 +10,7 @@ const cors = require("cors");
 app.use(cors());
 
 const newHotel = {
-  name: "New Hotel",
+  name: "New Hotel 1",
   category: "Mid-Range",
   location: "123 Main Street, Frazer Town",
   rating: 4.0,
