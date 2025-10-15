@@ -3,11 +3,13 @@ const mongoose = require("mongoose");
 
 const hotelSchema = new mongoose.Schema(
   {
-    name: { type: String, required: true },
+    name: {
+      type: String,
+      required: true,
+    },
     category: {
       type: [String],
       required: true,
-      enum: ["Budget", "Mid-Range", "Luxury", "Boutique", "Resort", "Other"],
     },
     location: {
       type: String,
@@ -41,8 +43,7 @@ const hotelSchema = new mongoose.Schema(
       type: [String],
     },
     priceRange: {
-      type: String,
-      enum: ["$$ (11-30)", "$$$ (31-60)", "$$$$ (61+)", "Other"],
+      type: [String],
     },
     reservationsNeeded: {
       type: Boolean,
