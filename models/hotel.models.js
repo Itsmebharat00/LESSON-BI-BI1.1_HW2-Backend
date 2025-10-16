@@ -1,7 +1,7 @@
 /** @format */
 const mongoose = require("mongoose");
 
-const hotelSchema = new mongoose.Schema(
+const HotelSchema = new mongoose.Schema(
   {
     name: {
       type: String,
@@ -76,5 +76,5 @@ const hotelSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const Hotel = mongoose.model("Hotel", hotelSchema);
+const Hotel = mongoose.model("Hotel", HotelSchema);
 module.exports = Hotel;
