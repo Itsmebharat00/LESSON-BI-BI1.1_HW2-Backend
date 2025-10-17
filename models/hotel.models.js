@@ -10,6 +10,7 @@ const HotelSchema = new mongoose.Schema(
     category: {
       type: [String],
       required: true,
+      enum: ["Budget", "Mid-Range", "Luxury", "Boutique", "Resort", "Other"],
     },
     location: {
       type: String,
@@ -43,7 +44,8 @@ const HotelSchema = new mongoose.Schema(
       type: [String],
     },
     priceRange: {
-      type: [String],
+      type: String,
+      enum: ["$$ (11-30)", "$$$ (31-60)", "$$$$ (61+)", "Other"],
     },
     reservationsNeeded: {
       type: Boolean,
